@@ -8,12 +8,18 @@
 
     /*--------------------------ROUTER -----------------------------*/
         //test de la valeur $path dans l'URL et import de la ressource
-        // if ($_SESSION['admin'] == true){
-        //     include'..'}
-        // else if  ($_SESSION['util'] = true){
-            
-        // }
-        
+        if ($_SESSION['admin'] == true){
+            include'./view/view_header_admin.php';
+        }
+        else if  ($_SESSION['util'] == true){
+            include './view/view_header_util.php';
+        }
+        else if ($_SESSION['ban'] == true){
+            include'./view/view_header_ban.php';
+        }
+        else{
+            include'./view/view_header_visiteur.php';
+        }
 
         switch($path){
             //route /evalmvc/test -> ./test.php
