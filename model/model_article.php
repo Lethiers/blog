@@ -71,7 +71,7 @@ public function newArticle($bdd,$id):void{
             'date_art' => $this->getDateArticle(),
             'id_cat' => $id
         ));
-        
+                
     } catch (Exception $e) {
         die('Erreur :' .$e->getMessage());
     }
@@ -83,6 +83,22 @@ public function showAllArticle($bdd):array{
     try {
         $req = $bdd->prepare('SELECT * FROM article');
         $req->execute();
+        $data = $req->fetchAll(PDO::FETCH_OBJ);
+        return $data;
+
+    } catch (Exception $e) {
+        die('Erreur :' .$e->getMessage());
+    }
+}
+
+
+// voir article par categorie
+public function showArticleByCat($bdd,$id):array{
+    try {
+        $req = $bdd->prepare('SELECT * FROM article WHERE id_cat =:id_cat');
+        $req->execute(array(
+            'id_cat'=> $id
+        ));
         $data = $req->fetchAll(PDO::FETCH_OBJ);
         return $data;
 

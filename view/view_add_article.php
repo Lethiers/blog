@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajout Article</title>
 </head>
+
 <body>
     <form action="" method="post">
         <p>Nom Article :</p>
@@ -15,7 +16,7 @@
         <p>Date de création :</p>
         <input type="date" name="date_art">
         <input type="submit" value="créer" name="create_art">
-    </form>
+    
     
 </body>
 </html>
