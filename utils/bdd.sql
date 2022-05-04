@@ -47,9 +47,6 @@ add constraint fk_filtrer_categorie
 foreign key(id_cat)
 references categorie (id_cat);
 
-
-
-
 alter table commentaire
 add constraint fk_ajouter_utilisateur
 foreign key(id_util)

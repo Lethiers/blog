@@ -72,6 +72,7 @@ public function newArticle($bdd,$id):void{
             'id_cat' => $id
         ));
         
+                
     } catch (Exception $e) {
         die('Erreur :' .$e->getMessage());
     }
@@ -90,6 +91,8 @@ public function showAllArticle($bdd):array{
         die('Erreur :' .$e->getMessage());
     }
 }
+
+
 // voir article par categorie
 public function showArticleByCat($bdd,$id):array{
     try {

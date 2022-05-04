@@ -17,6 +17,28 @@ if(isset($_POST['add'])){
         $cat->addCat($bdd);
         //utiliser le getter pour afficher le nom
         $msg = ''.$_POST['name_cat'].' à été ajouté';
+
+
+        ////////////////////////////// COPIER COLLER DE LA SELECTION DE CATEGORIES ////////////////////////////////
+
+        echo '<form>';
+        echo '<form action="" method="get">';
+        //instancier un nouvel objet
+        $cat = new Categorie(null);
+        //stocke dans un tableau la liste des catégories de la BDD
+        $tab = $cat->showAllCategorie($bdd);
+        //boucle pour afficher la liste des catégories (avec le nom )
+        foreach($tab as $value){
+            echo '<option value ='.$value->id_cat.'>   '.$value->name_cat.'  </option>';
+        }
+
+
+        echo '</select>';
+
+        echo '<input type="submit" value="voir">';
+        echo '</form>';
+
+        ////////////////////////////// COPIER COLLER DE LA SELECTION DE CATEGORIES ////////////////////////////////
     }
     //si vide
     else{
