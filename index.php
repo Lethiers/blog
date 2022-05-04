@@ -51,6 +51,10 @@
                 include './controler/ctrl_show_cat.php';
                 break ;
 
+            case $path === "/blog/modifRoleUser":
+                include './controler/ctrl_modify_role_user.php';
+                break;
+
             case $path !== "/blog/":
                 include './controler/ctrl_error.php';
                 break ;
