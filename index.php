@@ -8,6 +8,13 @@
 
     /*--------------------------ROUTER -----------------------------*/
         //test de la valeur $path dans l'URL et import de la ressource
+        if ($_SESSION['admin'] == true){
+            include'..'}
+        else if  ($_SESSION['util'] = true){
+            
+        }
+        }
+
         switch($path){
             //route /evalmvc/test -> ./test.php
             case $path === "/blog/connexion" : 
