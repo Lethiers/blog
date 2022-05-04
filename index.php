@@ -13,6 +13,9 @@
             case $path === "/blog/connexion" : 
                 include './controler/ctrl_connexion.php';
                 break ;
+            case $path === "/blog/addUser" : 
+                include './controler/ctrl_add_utilisateur.php';
+                break ;
 
             case $path === "/blog/addArticle" : 
                 include './controler/ctrl_add_article.php';
