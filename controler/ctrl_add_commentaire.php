@@ -6,6 +6,13 @@
     //variable message
     $date = date('Y-m-d');
     $msg = "";
+
+   
+    // recupération id article par la liste des categories
+    $idArt = $_GET['idArt'];
+    // recuperation id utilisateur lors de la connexion
+    $idUtil= $_SESSION['id'];
+
     //test si le bouton ajouté est cliqué
     if(isset($_POST['add'])){
         //test si les champs sont rempli
@@ -13,7 +20,7 @@
             //instancier un nouvel objet Commentaire (appel au constructeur)
             $comment = new Commentaire($_POST['add_commentaire'],$date);
             //appel à la méthode addComment de la classe Commentaire
-            $comment->addComment($bdd,null,null);
+            $comment->addComment($bdd,$idUtil,$idArt);
             //utiliser le getter pour afficher le nom
             $msg = 'Le commentaire à été ajouté';
             

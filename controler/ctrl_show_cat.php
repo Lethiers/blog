@@ -31,6 +31,7 @@ if (isset($_GET['categorie'])) {
             echo '<p>le nom de l\'article :' .$value->name_art.'</p>';
             echo '<p>la date de l\'article :' .$value->date_art.'</p>';
             echo '<p>le contenu de l\'article :' .$value->content_art.'</p>';
+            echo '<a href="addCommentaire?idArt=' .$value->id_art.'">commenter</a>';
         }
 }
 
