@@ -34,9 +34,17 @@
                     include './controller/ctrl_show_article.php';
                     break ;
 
-        //route en cas d'erreur
-            case $path !== "/cyberBlog/":
-                include './controler/controler_connexion.php';
+            
+                //route /blog/addCat -> ./controler/ctrl_create_categorie.php
+            case $path === "/blog/addCat":
+                include './controler/ctrl_create_cat.php';
                 break ;
+            //route /blog/showCat -> ./controler/ctrl_show_categorie.php
+            case $path === "/blog/showCat":
+                include './controler/ctrl_show_cat.php';
+                break ;
+                case $path !== "/blog/":
+                    include './controler/ctrl_error.php';
+                    break ;
             }
 ?>
