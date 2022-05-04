@@ -119,7 +119,7 @@
             try{
                 $req =$bdd->prepare('UPDATE utilisateur SET mdp_util = :mdp_util WHERE id_util = :id_util');
                 $req->execute(array(
-                    'mdp_util' => $this->getPwdUtil()
+                    'mdp_util' => $this->getPwdUtil(),
                     'id_util' => $this->getIdUtil()
                 ));
                 
@@ -135,7 +135,7 @@
             try{
                 $req =$bdd->prepare('UPDATE utilisateur SET mail_util = :mail_util WHERE id_util = :id_util');
                 $req->execute(array(
-                    'mail_util' => $this->getMailUtil()
+                    'mail_util' => $this->getMailUtil(),
                     'id_util' => $this->getIdUtil()
                 ));
                 

@@ -1,8 +1,8 @@
 <?php
     //import
-    include '../utils/connectBdd.php';
-    include '../model/model_commentaire.php';
-    include '../view/view_show_all_commentaire.php';
+    include './utils/connectBdd.php';
+    include './model/model_commentaire.php';
+    include './view/view_show_all_commentaire.php';
     //instancier un nouvel objet
     $comment = new Commentaire(null, null);
     //stocke dans un tableau la liste des articles de la BDD

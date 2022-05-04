@@ -1,8 +1,8 @@
 <?php
     //import
-    include '../utils/connectBdd.php';
-    include '../model/model_commentaire.php';
-    include '../view/view_add_commentaire.php';
+    include './utils/connectBdd.php';
+    include './model/model_commentaire.php';
+    include './view/view_add_commentaire.php';
     //variable message
     $date = date('Y-m-d');
     $msg = "";

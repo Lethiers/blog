@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-<libellé<p>Choisir Catégorie d'article</p></libellé>
-<select >
+<libellé><p>Choisir Catégorie d'article</p></libellé>
+
+<form action="" method="get">
+
+<select name='categorie'>
+
+
 
    
    
