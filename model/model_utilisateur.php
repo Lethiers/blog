@@ -115,12 +115,28 @@
             }
         }
 
-        public function modifyUser($bdd,$id){
+        public function modifyMdpUser($bdd,$id){
             try{
-                $req =$bdd->prepare('UPDATE utilisateur SET mail_util = :mail_util AND mdp_util = :mdp_util');
+                $req =$bdd->prepare('UPDATE utilisateur SET mdp_util = :mdp_util WHERE id_util = :id_util');
                 $req->execute(array(
-                    'mail_util' => $this->getMailUtil(),
                     'mdp_util' => $this->getPwdUtil()
+                    'id_util' => $this->getIdUtil()
+                ));
+                
+            }
+            catch(Exception $e)
+            {
+                //affichage d'une exception en cas d’erreur
+                die('Erreur : '.$e->getMessage());
+            }
+        }
+
+        public function modifyEmailUser($bdd,$id){
+            try{
+                $req =$bdd->prepare('UPDATE utilisateur SET mail_util = :mail_util WHERE id_util = :id_util');
+                $req->execute(array(
+                    'mail_util' => $this->getMailUtil()
+                    'id_util' => $this->getIdUtil()
                 ));
                 
             }
