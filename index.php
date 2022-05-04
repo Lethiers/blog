@@ -10,14 +10,26 @@
         //test de la valeur $path dans l'URL et import de la ressource
         switch($path){
             //route /evalmvc/test -> ./test.php
-            case $path === "/blog/connexion" : 
-                include './controler/ctrl_connexion.php';
+            case $path === "/cyberBlog/test" : 
+                include './test.php';
                 break ;
 
+            case $path === "/cyberBlog/addUser" : 
+                    include './controller/controller_add_user.php';
+                    break ;
+                    
+            case $path === "/cyberBlog/createArticle" : 
+                    include './controller/ctrl_article.php';
+                    break ;
+
+
+            case $path === "/cyberBlog/showArticle" : 
+                    include './controller/ctrl_show_article.php';
+                    break ;
 
         //route en cas d'erreur
-            case $path !== "/blog/":
-                include './controler/ctrl_error.php';
+            case $path !== "/cyberBlog/":
+                include './controler/controler_connexion.php';
                 break ;
             }
 ?>
