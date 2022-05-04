@@ -57,8 +57,9 @@
                 include './controler/ctrl_show_cat.php';
                 break ;
 
-            case $path !== "/blog/":
+            case $path != "/blog/":
                 include './controler/ctrl_error.php';
                 break ;
+                
             }
 ?>

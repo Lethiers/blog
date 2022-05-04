@@ -19,5 +19,10 @@
                 </ul>
         </div>
     </div>
+<<<<<<< Updated upstream
     </nav>';
+=======
+    </nav>
+    
+>>>>>>> Stashed changes
     </header>
