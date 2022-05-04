@@ -33,6 +33,13 @@
                     if($test[0]['id_role'] == 1){
                         $_SESSION['admin'] = true;
                     }
+                    if($test[0]['id_role'] == 3){
+                        $_SESSION['ban'] = true;
+                    }
+                    if($test[0]['id_role'] == 2){
+                        $_SESSION['util'] = true;
+                    }
+                    
                     $message = "vous etes connecter";
                     // header('Location: /blog/');
                 }

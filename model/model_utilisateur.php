@@ -49,7 +49,7 @@
             $this->mail_util = $id;
         }
         public function setPwdUtil($password):void{
-            $this->pwd_util = $password;
+            $this->mdp_util = $password;
         }
         public function setIdRole($role):void{
             $this->id_role = $role;
