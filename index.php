@@ -14,6 +14,10 @@
                 include './controler/ctrl_connexion.php';
                 break ;
 
+            case $path === "/blog/addArticle" : 
+                include './controler/ctrl_add_article.php';
+                break ;
+
 
         //route en cas d'erreur
             case $path !== "/blog/":
