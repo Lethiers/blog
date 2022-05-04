@@ -20,7 +20,7 @@ echo '<input type="submit" value="voir">';
 echo '</form>';
 
 if (isset($_GET['categorie'])) {
-    var_dump($_GET['categorie']);
+    // var_dump($_GET['categorie']);
 }
 
 ?>
